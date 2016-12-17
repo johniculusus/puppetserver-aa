@@ -21,3 +21,15 @@ node 'puppetc' { # This node is not connected to HPE network / no proxy
                 source => "puppet:///modules/wew/test2.txt"
         }
 }
+
+node default { 
+	include openssh::server
+
+        file { '/tmp/testmaster.txt':
+                ensure => present,
+                owner => root,
+                group => root,
+                mode => '777',
+                source => "puppet:///modules/wew/test2.txt"
+        }
+}
