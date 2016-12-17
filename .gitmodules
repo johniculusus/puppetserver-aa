@@ -1,3 +1,6 @@
 [submodule "code/environments/production/modules"]
 	path = code/environments/production/modules
 	url = git@github.com:johniculusus/puppet-samp-modules.git
+[submodule "puppet-git-hooks"]
+	path = puppet-git-hooks
+	url = git@github.com:drwahl/puppet-git-hooks.git
