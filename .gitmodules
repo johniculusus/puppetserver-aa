@@ -1,0 +1,3 @@
+[submodule "code/environments/production/modules"]
+	path = code/environments/production/modules
+	url = git@github.com:johniculusus/puppet-samp-modules.git

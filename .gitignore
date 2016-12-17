@@ -1,5 +1,4 @@
 mcollective/
 puppet/
 pxp-agent/
-code/environments/production/modules/
 code/hiera.yaml
