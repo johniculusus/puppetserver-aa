@@ -23,13 +23,19 @@ node 'puppetc' { # This node is not connected to HPE network / no proxy
 }
 
 node default { 
-	include openssh::server
+	#include openssh::server
 
         file { '/tmp/testmaster.txt':
                 ensure => present,
                 owner => root,
                 group => root,
-                mode => '777',
-                source => "puppet:///modules/filetransferbucket/test.txt"
+                mode => '777',,
+                source => "puppet:///modules/filetransferbucket/test.txt",
         }
+
+	exec { 'auto_update_master':
+		#path => ["/etc/puppetlabs/code/environments/production/modules/"],
+		command => '/bin/bash -c "git fetch" && /bin/bash -c "git merge origin/master"',
+		tries => '3'
+	}
 }
