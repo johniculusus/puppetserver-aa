@@ -6,7 +6,7 @@ node 'puppetc.asiapacific.hpqcorp.net' { # This node is connected to HPE network
 		owner => root,
 		group => root,
 		mode => '777',
-		source => "puppet:///modules/wew/test2.txt"
+		source => "puppet:///modules/filetransferbucket/test.txt"
 	}
 }
 
@@ -18,7 +18,7 @@ node 'puppetc' { # This node is not connected to HPE network / no proxy
                 owner => root,
                 group => root,
                 mode => '777',
-                source => "puppet:///modules/wew/test2.txt"
+                source => "puppet:///modules/filetransferbucket/test.txt"
         }
 }
 
@@ -30,6 +30,6 @@ node default {
                 owner => root,
                 group => root,
                 mode => '777',
-                source => "puppet:///modules/wew/test2.txt"
+                source => "puppet:///modules/filetransferbucket/test.txt"
         }
 }
